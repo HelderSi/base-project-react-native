@@ -11,9 +11,15 @@
     "react-devtool": "react-devtools"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.7.1",
+    "axios": "^0.19.0",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
-    "react-native": "0.61.5"
+    "react-native": "0.61.5",
+    "react-native-gesture-handler": "^1.5.2",
+    "react-native-status-bar-height": "^2.4.0",
+    "react-native-vector-icons": "^6.6.0",
+    "react-navigation": "^4.0.10"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

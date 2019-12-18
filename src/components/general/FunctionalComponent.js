@@ -1,13 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {SafeAreaView, Text, StatusBar} from 'react-native';
+import {SafeAreaView, Text, StatusBar, TouchableOpacity} from 'react-native';
+import Header from 'src/components/general/Header';
 
-const FunctionalComponent = ({title}) => {
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+const FunctionalComponent = ({title, navigation}) => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
+      <Header title={title} />
       <SafeAreaView>
-        <Text>{title}</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Welcome')}>
+          <Icon name="chevron-left" size={16} />
+        </TouchableOpacity>
       </SafeAreaView>
     </>
   );
@@ -18,7 +24,7 @@ FunctionalComponent.propTypes = {
 };
 
 FunctionalComponent.defaultProps = {
-  title: 'Iniciar o Cardápio Digital',
+  title: 'Componente',
 };
 
 export default FunctionalComponent;
