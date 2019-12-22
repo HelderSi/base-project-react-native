@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Text} from 'react-native';
 
-export default class ClassComponent extends React.Component {
+import Header from 'src/components/general/Header';
+
+export default class ScrennB extends React.Component {
   state = {
-    name: 'Statefull component',
+    name: 'Screen B',
   };
 
   componentDidMount() {}
@@ -26,7 +28,7 @@ export default class ClassComponent extends React.Component {
   render() {
     return (
       <>
-        <Text>{this.state.name}</Text>
+        <Header title={this.state.name} />
       </>
     );
   }

@@ -8,8 +8,7 @@ const Welcome = ({navigation}) => {
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
       <Text>Welcome</Text>
-      <TouchableOpacity
-        onPress={() => navigation.navigate('FunctionalComponent')}>
+      <TouchableOpacity onPress={() => navigation.navigate('User')}>
         <Text>Próximo</Text>
       </TouchableOpacity>
     </View>
