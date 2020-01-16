@@ -18,10 +18,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     color: colors.darker,
+    flex: 1,
   },
 
   button: {
     color: colors.darker,
+    flex: 1,
+    alignItems: 'center',
   },
 });
 

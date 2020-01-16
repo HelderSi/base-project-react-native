@@ -27,7 +27,7 @@ const ScreenA = ({title, list, actions}) => {
             <Button title={'X'} onPress={() => actions.remove(index)} />
           </View>
         ))}
-        <Button title={'Add'} onPress={actions.add} />
+        <Button title={'Add'} onPress={() => actions.add('Teste')} />
       </SafeAreaView>
     </>
   );

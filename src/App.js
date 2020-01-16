@@ -8,10 +8,11 @@ import store from 'src/store';
 import createNavigator from './routes';
 
 const Routes = createNavigator(false);
+import {setNavigator} from './services/navigation';
 
 const App = () => (
   <Provider store={store}>
-    <Routes />
+    <Routes ref={setNavigator} />
   </Provider>
 );
 
