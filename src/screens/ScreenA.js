@@ -4,7 +4,7 @@ import {View, SafeAreaView, Text, StatusBar, Button} from 'react-native';
 import {connect} from 'react-redux';
 import Header from 'src/components/general/Header';
 
-import * as ActionsList from 'src/store/actions/list';
+import {add, remove} from 'src/store/ducks/list';
 import {bindActionCreators} from 'redux';
 
 // import Icon from 'react-native-vector-icons/FontAwesome';
@@ -23,11 +23,11 @@ const ScreenA = ({title, list, actions}) => {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Text>{item}</Text>
+            <Text>{item.name}</Text>
             <Button title={'X'} onPress={() => actions.remove(index)} />
           </View>
         ))}
-        <Button title={'Add'} onPress={() => actions.add('Teste')} />
+        <Button title={'Add'} onPress={() => actions.add({name: 'Teste'})} />
       </SafeAreaView>
     </>
   );
@@ -42,7 +42,7 @@ ScreenA.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-  list: state.list,
+  list: state.list.list,
 });
 
 // const mapDispatchToProps = dispatch => ({
@@ -52,7 +52,7 @@ const mapStateToProps = state => ({
 // use this instead:
 // https://redux.js.org/api/bindactioncreators
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(ActionsList, dispatch),
+  actions: bindActionCreators({add, remove}, dispatch),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ScreenA);

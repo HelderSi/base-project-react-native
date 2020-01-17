@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {View, Text, TouchableOpacity} from 'react-native';
 import {withNavigation} from 'react-navigation';
 import {connect} from 'react-redux';
-import * as ActionsList from 'src/store/actions/list';
+import {Creators as ActionsList} from 'src/store/ducks/list';
 import {bindActionCreators} from 'redux';
 import {navigate} from 'src/services/navigation';
 import styles from './styles';
